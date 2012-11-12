@@ -5,7 +5,7 @@ gem 'rails', '4.0.0.beta', git: "https://github.com/rails/rails.git"
 gem 'journey', git: 'https://github.com/rails/journey.git'
 gem 'activerecord-deprecated_finders', git: 'https://github.com/rails/activerecord-deprecated_finders.git'
 gem 'mysql2'
-
+gem 'slim-rails'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

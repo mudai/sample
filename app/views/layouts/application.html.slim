@@ -1,0 +1,30 @@
+doctype
+html
+  head
+    title WebsoketGeolocation
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  body
+    #header
+      h1
+        a href="#" Sample
+      ul.headerlink
+        - if current_user
+          li= link_to "ログアウト", log_out_path
+        - else
+          li= link_to "ログイン", log_in_path
+
+    #menu
+      ul
+        li= link_to "トップ", root_path
+        li= link_to "トップ", "#"
+        li= link_to "トップ", "#"
+        li= link_to "トップ", "#"
+        li= link_to "トップ", "#"
+        li= link_to "トップ", "#"
+    #contents
+      p.notice= notice
+      p.alert= alert
+      = yield
+    #footer
