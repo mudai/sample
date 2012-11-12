@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0.beta', git: "https://github.com/rails/rails.git"
 gem 'journey', git: 'https://github.com/rails/journey.git'
 gem 'activerecord-deprecated_finders', git: 'https://github.com/rails/activerecord-deprecated_finders.git'
-gem 'arel', git: 'https://github.com/rails/arel.git'
 gem 'mysql2'
 
 # Gems used only for assets and not required
@@ -15,7 +14,7 @@ group :assets do
   gem 'coffee-rails', '~> 4.0.0.beta', git: 'https://github.com/rails/coffee-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', platforms: :ruby
+  gem 'therubyracer', platforms: :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -26,16 +25,16 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano', group: :development
 
 # To use debugger
-# gem 'debugger'
+gem 'debugger'
