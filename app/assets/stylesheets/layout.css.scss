@@ -112,9 +112,9 @@ body {
   #left-sidebar{
     border: double;
     width: 180px;
-    height: 400px;
+    height: 600px;
     float: left;
-    #box{
+    .box{
       border: double;
       width: 174px;
       height: 100px;
@@ -124,21 +124,25 @@ body {
   #main{
     border: double;
     width: 407px;
-    height: 400px;
+    height: 600px;
     float: left;
-    #box{
+    .box{
       border: double;
       width: 401px;
       height: 100px;
+    }
+    .graph_box{
+      border: double;
+      width: 401px;
     }
   }
 
   #right-sidebar{
     border: double;
     width: 180px;
-    height: 400px;
+    height: 600px;
     float: right;
-    #box{
+    .box{
       border: double;
       width: 174px;
       height: 100px;
