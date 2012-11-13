@@ -17,12 +17,9 @@ html
             | Sample
           .nav-collapse.collapse
             p.navbar-text.pull-right
-              - if current_user
-                | Logged in as 
-                a.navbar-link href="#"
-                  = current_user.try(:email)
-              - else
-                | Please Log in !
+              | Logged in as 
+              a.navbar-link href="#"
+                | Username
             ul.nav
               li.active
                 a href="#"
@@ -32,46 +29,26 @@ html
                   | About
               li
                 a href="#contact"
-                  | contact
-    .container-fluid
-      .row-fluid
-        .span3
-          .well
-            br
-            br
-            br
-            br
-            br
-            br
-            br
-            br
-            br
-            br
-            br
-        .span6
-          .well
-            = yield
-            br
-            br
-            br
-            br
-            br
-            br
-            br
-            br
-            br
-            br
-            br
-        .span3
-          .well
-            br
-            br
-            br
-            br
-            br
-            br
-            br
-            br
-            br
-            br
-            br
+                  | Contact
+    #header
+      h1
+        a href="#" Sample
+      ul.headerlink
+        - if current_user
+          li= link_to "ログアウト", log_out_path
+        - else
+          li= link_to "ログイン", log_in_path
+
+    #menu
+      ul
+        li= link_to "トップ", root_path
+        li= link_to "トップ", "#"
+        li= link_to "トップ", "#"
+        li= link_to "トップ", "#"
+        li= link_to "トップ", "#"
+        li= link_to "トップ", "#"
+    #contents
+      p.notice= notice
+      p.alert= alert
+      = yield
+    #footer
