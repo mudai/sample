@@ -2,6 +2,7 @@ Bear::Application.routes.draw do
   get "login" => "sessions#new", as: "login"
   get "logout" => "sessions#destroy", as: "logout"
   get "sign_up" => "users#new", as: "sign_up"
+  get "graph_data" => "graph_data#sample"
   root "users#new"
   resources :users
   resources :sessions
