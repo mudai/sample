@@ -112,19 +112,42 @@ body {
   #left-sidebar{
     border: double;
     width: 180px;
+    height: 400px;
     float: left;
+    #box{
+      border: double;
+      width: 174px;
+      height: 100px;
+    }
   }
 
   #main{
     border: double;
     width: 407px;
+    height: 400px;
     float: left;
+    #box{
+      border: double;
+      width: 401px;
+      height: 100px;
+    }
   }
 
   #right-sidebar{
     border: double;
     width: 180px;
+    height: 400px;
     float: right;
+    #box{
+      border: double;
+      width: 174px;
+      height: 100px;
+    }
+  }
+
+  #footer {
+    clear: both;
+    border: double;
   }
 }
 
