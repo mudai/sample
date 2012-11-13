@@ -79,15 +79,6 @@ GIT
       activesupport (>= 3.0)
       sprockets (~> 2.8)
 
-GIT
-  remote: https://github.com/seyhunak/twitter-bootstrap-rails.git
-  revision: 98f3ac5b65eace0fbfe06898f47db81ad47fed26
-  specs:
-    twitter-bootstrap-rails (2.1.6)
-      actionpack (>= 3.1)
-      execjs
-      railties (>= 3.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -99,7 +90,6 @@ GEM
       execjs
     coffee-script-source (1.4.0)
     columnize (0.3.6)
-    commonjs (0.2.6)
     debugger (1.2.1)
       columnize (>= 0.3.1)
       debugger-linecache (~> 1.1.1)
@@ -117,11 +107,6 @@ GEM
       thor (~> 0.14)
     json (1.7.5)
     kgio (2.7.4)
-    less (2.2.2)
-      commonjs (~> 0.2.6)
-    less-rails (2.2.6)
-      actionpack (>= 3.1)
-      less (~> 2.2.0)
     libv8 (3.3.10.4)
     mail (2.4.4)
       i18n (>= 0.4.0)
@@ -178,7 +163,6 @@ DEPENDENCIES
   debugger
   journey!
   jquery-rails
-  less-rails
   mysql2
   rails (= 4.0.0.beta)!
   sass-rails (~> 4.0.0.beta)!
@@ -186,6 +170,5 @@ DEPENDENCIES
   sprockets-rails (~> 2.0.0.rc1)!
   therubyracer
   turbolinks
-  twitter-bootstrap-rails!
   uglifier (>= 1.0.3)
   unicorn

@@ -12,8 +12,6 @@ group :assets do
   gem 'sprockets-rails', '~> 2.0.0.rc1', git: 'https://github.com/rails/sprockets-rails.git'
   gem 'sass-rails',   '~> 4.0.0.beta', git: 'https://github.com/rails/sass-rails.git'
   gem 'coffee-rails', '~> 4.0.0.beta', git: 'https://github.com/rails/coffee-rails'
-  gem 'twitter-bootstrap-rails', git: 'https://github.com/seyhunak/twitter-bootstrap-rails.git'
-  gem 'less-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', platforms: :ruby
 

@@ -6,49 +6,69 @@ html
     = javascript_include_tag "application"
     = csrf_meta_tags
   body
-    .navbar.navbar-inverse.navbar-fixed-top
-      .navbar-inner
-        .container-fluid
-          a.btn.btn-navbar data-toggle="collapse" data-target=".nav-collapse"
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.brand href="#"
-            | Sample
-          .nav-collapse.collapse
-            p.navbar-text.pull-right
-              | Logged in as 
-              a.navbar-link href="#"
-                | Username
-            ul.nav
-              li.active
-                a href="#"
-                  | Home
-              li
-                a href="#about"
-                  | About
-              li
-                a href="#contact"
-                  | Contact
     #header
       h1
         a href="#" Sample
       ul.headerlink
         - if current_user
-          li= link_to "ログアウト", log_out_path
+          li= link_to "ログアウト", logout_path
         - else
-          li= link_to "ログイン", log_in_path
+          li= link_to "ログイン", login_path
 
     #menu
       ul
         li= link_to "トップ", root_path
-        li= link_to "トップ", "#"
-        li= link_to "トップ", "#"
-        li= link_to "トップ", "#"
-        li= link_to "トップ", "#"
-        li= link_to "トップ", "#"
+        li= link_to "モニタリング", "#"
+        li= link_to "チャレンジ", "#"
+        li= link_to "イベント", "#"
+        li= link_to "カレンダー", "#"
+        li= link_to "その他", "#"
     #contents
-      p.notice= notice
-      p.alert= alert
-      = yield
+      #nav
+        | navi > navi > earth
+      - yield #レイアウトを組み上げるまで一旦コメント
+      #left-sidebar
+        | left文あああああああああああああああああああああ言
+        | left文言
+        | left文言
+        | left文言
+        | left文言
+        | left文言
+        | left文言
+        | left文言
+        | left文言
+        | left文言
+        | left文言
+        | left文言
+        | left文言
+        | left文言
+        | left文言
+      #main
+        | main文言
+        | main文言
+        | main文言
+        | main文言
+        | main文言
+        | main文言
+        | main文言
+        | main文言
+      #right-sidebar
+        | right文言
+        | right文言
+        | right文言
+        | right文言
+        | right文言
+        | right文言
+        | right文言
+        | right文言
+        | right文言
+        | right文言
+        | right文言
+        | right文言
+        | right文言
+        | right文言
+        | right文言
+        | right文言
+        | right文言
+        | right文言
     #footer

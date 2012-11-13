@@ -104,4 +104,27 @@ body {
   p {
     margin:0 0 1em 0;
   }
+
+  #nav {
+    border: double;
+  }
+
+  #left-sidebar{
+    border: double;
+    width: 180px;
+    float: left;
+  }
+
+  #main{
+    border: double;
+    width: 407px;
+    float: left;
+  }
+
+  #right-sidebar{
+    border: double;
+    width: 180px;
+    float: right;
+  }
 }
+
