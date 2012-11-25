@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20121122154114) do
   add_index "custom_values", ["custom_field_id"], name: "index_custom_values_on_custom_field_id"
 
   create_table "users", force: true do |t|
+    t.integer  "custom_field_id"
     t.string   "email"
     t.string   "password_hash"
     t.string   "password_salt"

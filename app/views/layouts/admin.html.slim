@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title Sample
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  body
+    #header
+      h1
+        a href="#" Sample
+      ul.headerlink
+        - if current_user
+          li= link_to "ログアウト", logout_path
+        - else
+          li= link_to "ログイン", login_path
+
+    #contents
+      #left-sidebar
+        .box
+          | profile-box1
+      #main
+        .box
+          | チャレンジ
+      #right-sidebar
+        .box
+          | 今日の一言
+      #footer
+        | Compy write フッター

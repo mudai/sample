@@ -36,7 +36,8 @@ html
           | banner
       #main
         .box
-          | モニタリング
+          - CustomField.all.each do |f|
+            = f.inspect
         .box
           | チャレンジ
         .graph_box
