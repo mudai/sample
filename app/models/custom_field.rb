@@ -1,5 +1,8 @@
+# -*- coding: utf-8 -*-
+
 class CustomField < ActiveRecord::Base
-  has_many :custom_values, :dependent => :delete_all
+  belongs_to :custom_box
+  has_many :custom_values, dependent: :delete_all
 
   serialize :possible_values
  

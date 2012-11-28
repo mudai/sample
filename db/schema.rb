@@ -11,33 +11,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20121122154114) do
+ActiveRecord::Schema.define(version: 20121128093616) do
+
+  create_table "custom_boxes", force: true do |t|
+    t.string   "title"
+    t.string   "type"
+    t.boolean  "is_required"
+    t.boolean  "editable"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "custom_fields", force: true do |t|
-    t.string   "type"
-    t.string   "name"
+    t.integer  "custom_box_id"
+    t.string   "title"
+    t.string   "unit"
     t.string   "field_format"
     t.text     "possible_values"
     t.string   "regexp"
     t.integer  "min_length"
     t.integer  "max_length"
-    t.boolean  "is_required"
     t.integer  "position"
     t.text     "default_value"
-    t.boolean  "editable"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "custom_fields", ["id", "type"], name: "index_custom_fields_on_id_and_type"
+  add_index "custom_fields", ["custom_box_id"], name: "index_custom_fields_on_custom_box_id"
 
   create_table "custom_values", force: true do |t|
+    t.integer  "custom_box_id"
     t.integer  "custom_field_id"
     t.text     "value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "custom_values", ["custom_box_id", "custom_field_id"], name: "index_custom_values_on_custom_box_id_and_custom_field_id"
   add_index "custom_values", ["custom_field_id"], name: "index_custom_values_on_custom_field_id"
 
   create_table "users", force: true do |t|
