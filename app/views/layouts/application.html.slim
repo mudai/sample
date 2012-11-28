@@ -36,8 +36,38 @@ html
           | banner
       #main
         .box
-          - CustomField.all.each do |f|
-            = f.inspect
+          .monitoring_box
+            table border="1" width="200"
+              tr
+                th colspan="3"
+                  | title
+              tr
+                td
+                  | 朝
+                td
+                  input type="text" name="text1" size="5"
+                td
+                  | kg
+          .monitoring_box
+            table border="1" width="200"
+              tr
+                th colspan="3"
+                  | title
+              tr
+                td
+                  | 朝
+                td
+                  select
+          .monitoring_box
+            table border="1" width="200"
+              tr
+                th colspan="3"
+                  | title
+              tr
+                td
+                  | 朝
+                td colspan="2"
+                  select
         .box
           | チャレンジ
         .graph_box

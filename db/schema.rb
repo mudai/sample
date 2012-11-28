@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20121128093616) do
 
   create_table "custom_boxes", force: true do |t|
     t.string   "title"
-    t.string   "type"
+    t.integer  "box_type"
     t.boolean  "is_required"
     t.boolean  "editable"
     t.integer  "position"

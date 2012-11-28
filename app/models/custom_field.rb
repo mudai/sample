@@ -6,7 +6,7 @@ class CustomField < ActiveRecord::Base
 
   serialize :possible_values
  
-  validate :name, presence: true, uniqueness: {scope: :type}, length: {maximum: 20}
+  validate :title, presence: true, uniqueness: {scope: :custom_box_id}, length: {maximum: 20}
   validate :field_format, presence: true, inclusion: { in: ["string", "text", "int", "float", "list", "bool"] }
 
   delegate :string?, :text?, :int?, :float?, :list?, :bool?, to: :field_format_with_inquiry, allow_nil: true, prefix: 'format'
