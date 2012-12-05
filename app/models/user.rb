@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 class User < ActiveRecord::Base
+  has_many :monitoring_histories
 
   attr_accessor :password
   before_save :encrypt_password
