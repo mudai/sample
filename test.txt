@@ -1,0 +1,2 @@
+次はパスワードを忘れた場合を作る
+http://railscasts.com/episodes/274-remember-me-reset-password?language=ja&view=asciicast
