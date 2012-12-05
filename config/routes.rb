@@ -1,12 +1,9 @@
 Bear::Application.routes.draw do
-  scope :module => "admin" do
-    resources :custom_fields
-  end
   get "login" => "sessions#new", as: "login"
   get "logout" => "sessions#destroy", as: "logout"
   get "sign_up" => "users#new", as: "sign_up"
   get "graph_data" => "graph_data#sample"
-  root "users#new"
+  root "home#index"
   resources :users
   resources :sessions
   # The priority is based upon order of creation: first created -> highest priority.

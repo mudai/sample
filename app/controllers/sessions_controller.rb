@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
-  layout 'single'
+  skip_before_filter :authenticate_user!, only: [:new, :create]
+  layout false
+
   def new
   end
 
