@@ -25,36 +25,6 @@ html
         li= link_to "その他", "#"
     #contents
       #nav
-        | navi > navi > earth
-      - yield #レイアウトを組み上げるまで一旦コメント
-      #left-sidebar
-        .box
-          | profile-box1
-        .box
-          | 新着-box
-        .box
-          | banner
-      #main
-        .box
-          | TODO list
-        .box
-          .monitoring_box
-            h3
-              | 今日の記録
-            p
-              | 歩数(歩)
-              = text_field_tag :test
-            p
-              | 体重(kg)
-              = text_field_tag :test
-        .graph_box
-          #graph style="min-width: 400px; height: 300px; margin: 0 auto"
-      #right-sidebar
-        .box
-          | 今日の一言
-        .box
-          | イベント１
-        .box
-          | イベント２
-      #footer
-        | Compy write フッター
+        | nav > nav > navi
+        = yield :nav
+      = yield
