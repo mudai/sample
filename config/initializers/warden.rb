@@ -2,11 +2,8 @@
 Warden::Strategies.add(:password) do
   def authenticate!
     # paramsをsymbolでとれない
-    if user = User.authenticate(params['email'], params['password'])
-      success! user
-    else
-      fail "Invalid email or password"
-    end
+    u = User.authenticate(params['email'], params['password'])
+    u.nil? ? fail("Invalid email or password") : success!(u)
   end
 end
 
