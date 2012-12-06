@@ -1,3 +1,3 @@
 # Be sure to restart your server when you modify this file.
 
-Bear::Application.config.session_store :cookie_store, key: '_bear_session'
+Bear::Application.config.session_store :cookie_store, key: '_bear_session', expire_after: 1.day

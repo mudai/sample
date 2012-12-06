@@ -4,8 +4,6 @@ Warden::Strategies.add(:password) do
     if u = User.authenticate(params[:email], params[:password])
       if params[:remember_me]
         cookies.permanent[:remember_me_token] = u.remember_me_token
-      else
-        cookies[:remember_me_token] = u.remember_me_token
       end
 
       success!(u)
@@ -25,5 +23,5 @@ Warden::Manager.serialize_into_session do |user|
 end
 
 Warden::Manager.serialize_from_session do |id|
-  User.find(id)
+  User.find_by(id: id)
 end
