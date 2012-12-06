@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
 
   def destroy
     warden.logout
+    cookies.delete(:remember_me_token)
     redirect_to root_url, notice: "Logged out!"
   end
 end

@@ -1,9 +1,17 @@
 # -*- coding: utf-8 -*-
 Warden::Strategies.add(:password) do
   def authenticate!
-    # paramsをsymbolでとれない
-    u = User.authenticate(params['email'], params['password'])
-    u.nil? ? fail("Invalid email or password") : success!(u)
+    if u = User.authenticate(params[:email], params[:password])
+      if params[:remember_me]
+        cookies.permanent[:remember_me_token] = u.remember_me_token
+      else
+        cookies[:remember_me_token] = u.remember_me_token
+      end
+
+      success!(u)
+    else
+      fail("Invalid email or password")
+    end
   end
 end
 

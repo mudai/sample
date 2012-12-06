@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   has_many :monitoring_histories
 
   validates :email, presence: true, uniqueness: true
-  before_create { generate_token(:auth_token) }
+  before_create { generate_token(:remember_me_token) }
 
   def self.authenticate(email, password)
     find_by(email: email).try(:authenticate, password)

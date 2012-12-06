@@ -122,6 +122,8 @@ GEM
     rack (1.4.1)
     rack-test (0.6.2)
       rack (>= 1.0)
+    rails_warden (0.5.7)
+      warden (>= 1.0.0)
     raindrops (0.10.0)
     rake (10.0.2)
     rdoc (3.12)
@@ -174,6 +176,7 @@ DEPENDENCIES
   jquery-rails
   mysql2
   rails (= 4.0.0.beta)!
+  rails_warden
   sass-rails (~> 4.0.0.beta)!
   slim-rails
   sprockets-rails (~> 2.0.0.rc1)!
@@ -182,4 +185,3 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.0.3)
   unicorn
-  warden
