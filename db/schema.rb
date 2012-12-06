@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20121205081810) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "remember_me_token"
+    t.string   "password_reset_token"
+    t.datetime "password_reset_sent_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

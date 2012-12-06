@@ -1,4 +1,5 @@
 Bear::Application.routes.draw do
+  get "password_resets/new"
   scope constraints: lambda{|r| r.env['warden'].user.nil? } do
     get "sign_up" => "users#new", as: "sign_up"
     get "login" => "sessions#new", as: "login"
@@ -7,6 +8,7 @@ Bear::Application.routes.draw do
   root "home#index"
   resources :users
   resources :sessions
+  resources :password_resets
   get "graph_data" => "graph_data#sample"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
