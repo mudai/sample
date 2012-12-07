@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20121205081810) do
+ActiveRecord::Schema.define do
+
+  migrations do
+    migration 20121112014408, "4f63f9e41a3e2bcb0107ff7cdca758d2", "create_users"
+    migration 20121205081810, "61315c7cdb61d4d9a7cac6abdf745a0f", "create_monitoring_histories"
+  end
 
   create_table "monitoring_histories", force: true do |t|
     t.integer  "user_id"

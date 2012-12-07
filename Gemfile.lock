@@ -20,11 +20,11 @@ GIT
 
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 0dc1417185aeeec333e7ead0bab340e4e188df4e
+  revision: 1eaf3db80415798bfd1395e104bc12985109a4f6
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
-      mail (~> 2.5.2)
+      mail (~> 2.5.3)
     actionpack (4.0.0.beta)
       activesupport (= 4.0.0.beta)
       builder (~> 3.1.0)
@@ -109,8 +109,8 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.7.5)
     kgio (2.7.4)
-    libv8 (3.3.10.4)
-    mail (2.5.2)
+    libv8 (3.11.8.4)
+    mail (2.5.3)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -128,6 +128,7 @@ GEM
     rake (10.0.2)
     rdoc (3.12)
       json (~> 1.4)
+    ref (1.0.2)
     sass (3.2.3)
     slim (1.3.4)
       temple (~> 0.5.5)
@@ -140,8 +141,8 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     temple (0.5.5)
-    therubyracer (0.10.2)
-      libv8 (~> 3.3.10)
+    therubyracer (0.11.0)
+      ref
     thin (1.5.0)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -151,7 +152,7 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (0.5.2)
+    turbolinks (0.6.1)
       coffee-rails
     tzinfo (0.3.35)
     uglifier (1.3.0)
@@ -174,6 +175,7 @@ DEPENDENCIES
   debugger
   journey!
   jquery-rails
+  libv8 (~> 3.11.8)
   mysql2
   rails (= 4.0.0.beta)!
   rails_warden
