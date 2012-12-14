@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20121205081810) do
     t.integer  "user_id"
     t.integer  "number_of_steps"
     t.float    "body_weight"
+    t.date     "recorded_on"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

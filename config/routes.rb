@@ -9,6 +9,7 @@ Bear::Application.routes.draw do
   resources :users
   resources :sessions
   resources :password_resets
+  resources :monitoring_histories
   get "graph_data" => "graph_data#sample"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

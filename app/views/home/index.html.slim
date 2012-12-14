@@ -12,14 +12,17 @@
     | TODO list
   .box
     .monitoring_box
-      h3
-        | 今日の記録
-      p
-        | 歩数(歩)
-        = text_field_tag :test
-      p
-        | 体重(kg)
-        = text_field_tag :test
+      = form_for @monitoring_history do |f|
+        h3
+          | 今日の記録
+        p
+          | 歩数(歩)
+          = f.text_field :number_of_steps
+        p
+          | 体重(kg)
+          = f.text_field :body_weight
+          = f.hidden_field :recorded_on
+        = f.submit
   .graph_box
     #graph style="min-width: 400px; height: 300px; margin: 0 auto"
 #right-sidebar

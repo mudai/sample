@@ -7,6 +7,12 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
+  def redirect_to_back(default = root_path)
+      redirect_to :back
+  rescue ActionController::RedirectBackError
+      redirect_to default
+  end
+
   private
   def current_user
     @current_user ||= warden.authenticate
@@ -19,4 +25,5 @@ class ApplicationController < ActionController::Base
   def warden
     env['warden']
   end
+
 end
