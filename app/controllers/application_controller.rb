@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   private
   def current_user
-    warden.user || warden.set_user(User.find_by(remember_me_token: cookies[:remember_me_token]))
+    @current_user ||= warden.authenticate
   end
 
   def authenticate_user!

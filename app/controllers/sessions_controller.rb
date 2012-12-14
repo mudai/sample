@@ -8,7 +8,10 @@ class SessionsController < ApplicationController
   end
 
   def create
-    warden.authenticate!
+    u = warden.authenticate!
+    if params[:remember_me]
+      cookies.permanent[:remember_me_token] = u.remember_me_token
+    end
     redirect_to root_url, notice: "Logged in!"
   end
 
