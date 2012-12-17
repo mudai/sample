@@ -20,7 +20,7 @@ GIT
 
 GIT
   remote: https://github.com/rails/rails.git
-  revision: aefdcfdf3daab74b337035060e86f6854d80ab1e
+  revision: d8607c1d7fa063873a570cace5bd4c4f55bb8af9
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
@@ -100,6 +100,7 @@ GEM
     debugger-linecache (1.1.2)
       debugger-ruby_core_source (>= 1.1.1)
     debugger-ruby_core_source (1.1.5)
+    ejs (1.1.1)
     erubis (2.7.0)
     eventmachine (1.0.0)
     execjs (1.4.0)
@@ -124,6 +125,11 @@ GEM
     rack (1.4.1)
     rack-test (0.6.2)
       rack (>= 1.0)
+    rails-backbone (0.8.0)
+      coffee-script (~> 2.2.0)
+      ejs (~> 1.1.1)
+      jquery-rails (~> 2.1.3)
+      railties (>= 3.1.0)
     rails_warden (0.5.7)
       warden (>= 1.0.0)
     raindrops (0.10.0)
@@ -182,6 +188,7 @@ DEPENDENCIES
   libv8 (~> 3.11.8)
   mysql2
   rails (= 4.0.0.beta)!
+  rails-backbone
   rails_warden
   sass-rails (~> 4.0.0.beta)!
   slim-rails

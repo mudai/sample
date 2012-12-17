@@ -15,4 +15,9 @@
 //= require turbolinks
 //= require highcharts
 //= require exporting
+//= require underscore
+//= require backbone
+//= require backbone_rails_sync
+//= require backbone_datalink
+//= require backbone/bear
 //= require_tree .

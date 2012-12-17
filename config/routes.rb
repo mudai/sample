@@ -1,4 +1,6 @@
 Bear::Application.routes.draw do
+  resources :posts
+
   get "test" => "test#index"
   get "password_resets/new"
   scope constraints: lambda{|r| r.env['warden'].user.nil? } do

@@ -1,0 +1,9 @@
+<div id="posts"></div>
+
+<script type="text/javascript">
+  $(function() {
+    // Bear is the app name
+    window.router = new Bear.Routers.PostsRouter({posts: <%= @posts.to_json.html_safe -%>});
+    Backbone.history.start();
+  });
+</script>

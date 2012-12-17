@@ -11,13 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20121205081810) do
+ActiveRecord::Schema.define(version: 20121217141313) do
 
   create_table "monitoring_histories", force: true do |t|
     t.integer  "user_id"
     t.integer  "number_of_steps"
     t.float    "body_weight"
     t.date     "recorded_on"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.string   "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
