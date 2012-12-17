@@ -1,4 +1,5 @@
 Bear::Application.routes.draw do
+  get "test" => "test#index"
   get "password_resets/new"
   scope constraints: lambda{|r| r.env['warden'].user.nil? } do
     get "sign_up" => "users#new", as: "sign_up"
