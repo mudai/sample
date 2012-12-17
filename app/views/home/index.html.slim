@@ -24,7 +24,7 @@
           = f.hidden_field :recorded_on
         = f.submit
   .graph_box
-    #graph style="min-width: 400px; height: 300px; margin: 0 auto"
+    #graph data-source="#{graph_path(graph_type: "monitoring_history", current_date: Date.today, period: "3month", series1: "steps", series2: "weght")}" style="min-width: 400px; height: 400px; margin: 0 auto"
 #right-sidebar
   .box
     | 今日の一言
