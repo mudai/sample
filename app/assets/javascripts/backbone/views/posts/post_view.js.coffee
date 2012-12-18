@@ -15,5 +15,5 @@ class Bear.Views.Posts.PostView extends Backbone.View
     return false
 
   render: ->
-    $(@el).html(@template(@model.toJSON() ))
+    @$el.html(@template(@model.toJSON() ))
     return this

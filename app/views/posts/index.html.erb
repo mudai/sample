@@ -1,9 +1,22 @@
-<div id="posts"></div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<script type="text/javascript">
-  $(function() {
-    // Bear is the app name
-    window.router = new Bear.Routers.PostsRouter({posts: <%= @posts.to_json.html_safe -%>});
-    Backbone.history.start();
-  });
-</script>
+
+    <div id="posts"></div>
+
+    <script type="text/javascript">
+      $(function() {
+          // Bear is the app name
+          window.router = new Bear.Routers.PostsRouter({posts: <%= @posts.to_json.html_safe -%>});
+          Backbone.history.start();
+      });
+    </script>
+  </body>
+</html>
