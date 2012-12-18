@@ -20,7 +20,7 @@ GIT
 
 GIT
   remote: https://github.com/rails/rails.git
-  revision: d8607c1d7fa063873a570cace5bd4c4f55bb8af9
+  revision: 60214e80572ca8a4ddb4f2af4a6653efa2e74023
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
@@ -125,7 +125,7 @@ GEM
     rack (1.4.1)
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails-backbone (0.8.0)
+    rails-backbone (0.9.0)
       coffee-script (~> 2.2.0)
       ejs (~> 1.1.1)
       jquery-rails (~> 2.1.3)
